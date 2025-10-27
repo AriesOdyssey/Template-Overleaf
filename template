@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[backend=biber, maxcitenames = 1, citestyle = authoryear, uniquelist=false, uniquename = false,  maxbibnames=20]{biblatex}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{colortbl}
+\definecolor{LB}{HTML}{DC7633}
+
+\usepackage[colorlinks=true, linkcolor=LB, citecolor = LB]{hyperref}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+%\renewcommand{\autorefname}{Appendix}
+\newcommand{\todo}[1]{\textbf{\textcolor{red}{TODO: #1}}\newline}
+\newcommand{\respond}[1]{\textbf{\textcolor{green}{Mening: #1}}\newline}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{changepage}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{tabularx}
+
+\addbibresource{references.bib}
+\bibliography{references}
+
+%horizontal line and its thickness
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\setlength{\skip\footins}{1.5\baselineskip}
+
+\addbibresource{references.bib}
+
+%%%%%%DOCUMENT%%%%%%%%
+\begin{document}
+
+%%%% TITLE PAGE %%%%
+\begin{titlepage}
+
+\setlength{\skip\footins}{1.5\baselineskip}
+
+\center
+%University
+\textsc{\LARGE UNIVERSITY}\\[0.5cm]
+\textsc{\Large FACULTY}\\[0.2cm]
+
+%Titel and subtitel
+\HRule \\[0.8cm]
+\LARGE \bfseries{TITLE}\\[0.5cm]
+\Large{SUBJECT}
+\HRule \\[0.5cm]
+
+%Author info
+\large
+\normalfont{TEAM}\\
+\normalfont{AUTHORS\\[0.2cm]}		
+\large \normalfont{Word count: WORD COUNT}\\[0.2cm]
+{\large \today}\\[0.5cm]
+
+\begin{abstract}
+\noindent 
+\end{abstract}
+
+\clearpage
+\pagenumbering{arabic}
+
+\end{titlepage}
+
+%%%%%TABLE OF CONTENTS%%%%%%%
+
+%\tableofcontentsc 
+%\setcounter{page}{1}
+%\newpage
+
+%%%%%%SECTIONS%%%%%%
+
+
+\section{Introduction}\label{sec: Intro}
+
+\section{Conclusion}\label{sec: Conc}
+
+\newpage
+\printbibliography
+\newpage
+\renewcommand*{\thesection}{\Alph{section}}
+\appendix
+
+\end{document}
